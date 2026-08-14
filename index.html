@@ -264,20 +264,40 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
 </script>
 <!-- LOGISTICS MODAL -->
 <div id="logisModal" class="modal">
-  <div class="modal-content">
+  <div class="modal-content" style="max-width:1000px; padding:40px">
     <span class="close" onclick="closeModal('logisModal')">&times;</span>
-    
-    <!-- This will load your full README content -->
-    <iframe src="https://github.com/Debbie8399/Logistics-Operation-Analysis" 
-            style="width:100%; height:80vh; border:none; border-radius:8px; background:#fff">
-    </iframe>
-    
-    <div style="margin-top:20px; text-align:center">
-      <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" 
-         style="padding:12px 24px; background:#4ade80; color:#0a0a0a; border-radius:8px; text-decoration:none; font-weight:600">
-         Open Full Project on GitHub →
-      </a>
-    </div>
+    <div id="logis-readme" style="color:#ddd">Loading project...</div>
+  </div>
+</div>
+
+<script>
+async function loadLogisReadme() {
+  const url = 'https://raw.githubusercontent.com/Debbie8399/Logistics-Operation-Analysis/main/README.md';
+  try {
+    const res = await fetch(url);
+    const text = await res.text();
+    // simple markdown to html
+    let html = text
+      .replace(/^# (.*$)/gim, '<h1 style="font-size:2.5rem;font-weight:800;margin:20px 0">$1</h1>')
+      .replace(/^## (.*$)/gim, '<h2 style="font-size:1.8rem;font-weight:700;margin:30px 0 15px">$1</h2>')
+      .replace(/\!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" style="width:100%;border-radius:8px;margin:20px 0">')
+      .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" style="color:#4ade80">$1</a>')
+      .replace(/\n/g, '<br>');
+    document.getElementById('logis-readme').innerHTML = html;
+  } catch(e) {
+    document.getElementById('logis-readme').innerHTML = 'Error loading. <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank">Open on Github</a>';
+  }
+}
+
+// load when modal opens
+function openModal(id){
+  document.getElementById(id).style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  if(id === 'logisModal'){
+    loadLogisReadme();
+  }
+}
+</script>
   </div>
 </div>
 </div>

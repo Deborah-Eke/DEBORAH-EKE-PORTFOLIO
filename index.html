@@ -195,11 +195,12 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
     <button class="filter" data-filter="excel">Excel</button>
   </div>
 
-  <div class="proj-card show" data-category="powerbi">
-    <h3>Logistics Operations Dashboard - Power BI</h3>
-    <img src="Logistics.png.jpg" alt="Logistics Dashboard" onclick="openModal('logisModal')">
-    <p>Power BI dashboard presenting KPIs on revenue, efficiency, and delivery performance. Cleaned data in Power Query, built relationships and DAX measures to analyze operational patterns.</p>
-   <a href="#" onclick="openModal('logisModal'); return false;" style="display:inline-block;margin-top:12px;padding:7px 20px;border:1px solid #555;color:#fff;text-decoration:none;font-size:0.8rem">VIEW PROJECT</a>
+ <div class="proj-card show" data-category="powerbi sql">
+    <h3>Logistics Operation Analysis</h3>
+    <img src="Logistics.png.jpg" alt="Logistics Operation Analysis" onclick="openModal('logisModal')">
+    <p>End-to-end analysis of US trucking operations using Power BI + SQL. Cleaned 14 tables with 550K+ rows, built a star schema, and delivered insights that cut delivery delays and $1.6M in preventable incidents.</p>
+    <p><b>Technologies:</b> SQL, Power BI, Power Query, DAX</p>
+   <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" style="display:inline-block;margin-top:12px;padding:7px 20px;border:1px solid #555;color:#fff;text-decoration:none;font-size:0.8rem">VIEW PROJECT ON GITHUB</a>
   </div>
 
   <div class="proj-card show" data-category="powerbi sql">
@@ -266,114 +267,29 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
   <div class="modal-content" style="max-width:800px; padding:50px">
     <span class="close" onclick="closeModal('logisModal')">&times;</span>
     
-    <!-- Title -->
-    <h1 style="font-size:2.8rem; font-weight:800; line-height:1.2; margin-bottom:12px">Logistics Operations Analysis using Power BI</h1>
-    <p style="color:#aaa; font-size:1.1rem; margin-bottom:8px">An end-to-end analysis of a US trucking operation — from raw data to interactive dashboard</p>
-    <p style="color:#4ade80; font-size:0.95rem; margin-bottom:40px">Interact with the dashboard: <a href="#" style="color:#4ade80; text-decoration:underline">View on Power BI</a></p>
+    <h1 style="font-size:2.8rem; font-weight:800; line-height:1.2; margin-bottom:12px">Logistics Operation Analysis</h1>
+    <p style="color:#aaa; font-size:1.1rem; margin-bottom:8px">Power BI + SQL analysis of US trucking operations with 550,000+ rows of data</p>
+    <p style="color:#4ade80; font-size:0.95rem; margin-bottom:40px">View the code: <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" style="color:#4ade80; text-decoration:underline">GitHub Repository</a></p>
     
-    <!-- Big Overview Image -->
-    <img src="LOGIS.png" alt="Dashboard Overview" style="width:100%; border-radius:4px; margin:30px 0">
-    <p style="color:#888; font-size:0.85rem; text-align:center; margin-top:-20px; margin-bottom:40px"><i>Main dashboard overview showing key operational KPIs</i></p>
+    <img src="Logistics.png.jpg" alt="Dashboard Overview" style="width:100%; border-radius:4px; margin:30px 0">
     
-    <!-- Introduction -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Introduction</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px">This study analyzes three years of operational data from a US trucking company to understand where the business is making money, where it is losing money, and where service quality is breaking down. The trucking industry runs on thin margins, and most operators generate enormous amounts of transactional data that never gets connected into a single picture. This project set out to change that.</p>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px">The dataset is made up of <b>14 related tables</b> covering every part of the operation spanning 2022 to 2024 with roughly <b>550,000 rows</b> of operational records.</p>
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Project Overview</h2>
+    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px">Analyzed 3 years of trucking operations data from 14 related tables to identify inefficiencies in delivery performance, fuel usage, and profitability. Built a complete Power BI dashboard with a clean star schema data model.</p>
     
-    <!-- Data Sources -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Data Sources</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:15px"><b>Dimension tables</b> (the "who, what, and where"):</p>
-    <ul style="color:#ddd; line-height:2; font-size:1.05rem; margin-bottom:25px; padding-left:25px">
-      <li><b>customers</b> — customer accounts, types, and contract details</li>
-      <li><b>drivers</b> — driver profiles, experience, and home terminals</li>
-      <li><b>trucks</b> — fleet equipment, make, model year, and status</li>
-      <li><b>trailers</b> — trailer inventory, type, and length</li>
-      <li><b>routes</b> — origin-destination lanes and typical distances</li>
-      <li><b>facilities</b> — terminals and warehouses with locations and dock information</li>
-    </ul>
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Key Insights</h2>
+    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>1. On-time delivery issue:</b> Only 44.6% of deliveries arrived on time vs 90% industry standard</p>
+    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>2. Preventable incidents:</b> 37.6% of safety incidents were preventable, costing $1.6M in damages</p>
+    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px"><b>3. Revenue concentration:</b> Top 10 customers generated $50M+ in revenue</p>
     
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:15px"><b>Fact tables</b> (the "what happened"):</p>
-    <ul style="color:#ddd; line-height:2; font-size:1.05rem; margin-bottom:25px; padding-left:25px">
-      <li><b>loads</b> — every customer order, with revenue, weight, and route</li>
-      <li><b>trips</b> — the actual movement of each load, with miles and fuel data</li>
-      <li><b>fuel_purchases</b> — every fuel transaction across the fleet</li>
-      <li><b>maintenance_records</b> — service and repair events per truck</li>
-      <li><b>delivery_events</b> — pickup and delivery scans with detention and on-time flags</li>
-      <li><b>safety_incidents</b> — accidents and violations with cost and fault details</li>
-    </ul>
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Technologies Used</h2>
+    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px">SQL, Power BI, Power Query, DAX, Data Modeling, Data Cleaning</p>
     
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px"><b>Aggregate tables</b> (pre-summarized monthly metrics): <b>driver_monthly_metrics</b> and <b>truck_utilization_metrics</b></p>
-    
-    <!-- Data Cleaning -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Data Cleaning and Preparation</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:25px">The main tool used for this project is Power BI. Before any analysis could begin, the 14 raw tables needed to be cleaned and prepared in <b>Power Query</b>. This involved several steps:</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>1. Removed duplicate records.</b> Each table was checked for duplicate rows, and primary key columns were checked to confirm every identifier was unique. Removing duplicates ensures that counts and totals are not inflated.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>2. Fixed data types.</b> Each column was assigned the proper type manually — ID columns set to text, date columns set to date, revenue and cost columns set to decimal numbers, and quantity columns set to whole numbers. Correct data types are essential because they control how relationships and calculations behave later.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>3. Standardized text columns.</b> Text fields such as city names, statuses, and categories were trimmed of extra spaces and standardized in casing so that values would match consistently across tables.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>4. Handled missing values.</b> Columns were reviewed for blanks. Where a blank carried meaning the value was left as is. Where a blank should be treated as zero, it was filled with zero so calculations would work correctly.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px"><b>5. Created relationships between the tables.</b> Once the tables were clean, relationships were built in the Model view to connect them. All relationships were set as one-to-many with a single filter direction, forming a clean star schema. A central Date table was created and connected to every table that has a date.</p>
-    
-    <!-- Dashboard Images -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Data Visualization</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:30px">The Overview page was designed to answer the most important questions at a glance, then let the user drill deeper. Each visual was chosen deliberately for the type of information it communicates.</p>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>KPI cards (Total Revenue, Total Profit, Total Miles, AVG MPG, Profit Margin %).</b> Cards were used for the headline numbers because a single large figure is the fastest way to communicate a key metric. These five cards give an immediate summary of the entire operation's scale and health before the user examines any chart.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Top 10 Customers by Revenue — horizontal bar chart.</b> A horizontal bar chart works well for ranking because it orders the items clearly and leaves enough room for long customer names to remain readable. It immediately shows which customers matter most and how concentrated the revenue is among the leading accounts.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Customer Type by Revenue — donut chart.</b> A donut chart is effective for showing parts of a whole when there are only a few categories, which makes the overall revenue mix easy to understand at a glance.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Total Incident by Months — line chart.</b> A line chart is the clearest way to show a trend across time, and plotting incidents month by month reveals whether safety events are rising, falling, or following a seasonal pattern across the year.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Fleet Utilization Rate — gauge.</b> A gauge is ideal for a metric that should be read against its full potential, since it answers the question of how close the fleet is to being fully used. At eighty-three percent, the gauge shows at once that the fleet is being used efficiently.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>AVG Revenue per Load — gauge.</b> A second gauge displays the average value of each load, giving a quick read on how healthy the pricing is on each individual order.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Vehicle Damage Cost by Incident Type — column chart.</b> A column chart makes it easy to compare values side by side, so the most expensive incident types, such as equipment damage and accidents, stand out clearly.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>Monthly summary table (Revenue, Profit, Fuel Cost, Maintenance Cost, Miles).</b> A table is the best choice when exact figures matter and when several related numbers need to be compared row by row, so it serves the users who want precise values rather than visual approximations.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>AVG MPG by Months — line chart.</b> A line chart shows how fuel efficiency changed across the year and helps identify any months where mileage dropped.</p>
-
-<p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px"><b>Slicers (Year, Quarter).</b> Slicers were placed at the top of the page so that the entire dashboard can be filtered by time period. Because every table is connected to the central date table, selecting a year or a quarter updates every visual on the page at the same time.</p>
-   
-    <img src="LOGIS1.png" alt="Revenue KPIs" style="width:100%; border-radius:4px; margin:25px 0">
-    <p style="color:#888; font-size:0.85rem; text-align:center; margin-top:-15px; margin-bottom:30px"><i>KPI cards for Total Revenue, Total Profit, Total Miles, AVG MPG, and Profit Margin</i></p>
-    
-    <img src="LOGIS2.png" alt="Regional Breakdown" style="width:100%; border-radius:4px; margin:25px 0">
-    <p style="color:#888; font-size:0.85rem; text-align:center; margin-top:-15px; margin-bottom:30px"><i>Top 10 Customers by Revenue and Customer Type breakdown</i></p>
-    
-    <img src="LOGIS3.png" alt="Delivery Trends" style="width:100%; border-radius:4px; margin:25px 0">
-    <p style="color:#888; font-size:0.85rem; text-align:center; margin-top:-15px; margin-bottom:40px"><i>Fleet utilization, safety incidents, and delivery performance trends</i></p>
-    
-    <!-- Insights -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Insights</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>1. On-time delivery is the biggest problem.</b> Only about 44.6% of deliveries arrived on time, far below the industry standard of 90% or more. With more than half of all deliveries late, this is the single most important issue revealed by the data.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>2. The lateness is not caused by a driver shortage.</b> Pickups were on time about 67% of the time, but deliveries dropped to 45%. This gap suggests that delays build up during the trip — most likely from detention at customer facilities — rather than from a lack of drivers.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px"><b>3. The business is concentrated in a few customers and routes.</b> The top ten customers generated more than $50 million in revenue, and the single most profitable route produced $3.9 million in profit on its own.</p>
-    
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px"><b>4. A large share of safety incidents were preventable.</b> About 37.6% of incidents were preventable, costing roughly $1.6 million in damages over the three years.</p>
-    
-    <!-- Recommendation -->
-    <h2 style="font-size:1.8rem; font-weight:700; margin-top:50px; margin-bottom:20px">Recommendation</h2>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:18px">The company should focus first on the on-time delivery problem, since it affects every customer and threatens contract renewals. Because the data points to facility detention rather than driver capacity, the most effective first step is to audit wait times at the worst-performing facilities and renegotiate detention terms with those customers.</p>
-    <p style="color:#ddd; line-height:1.9; font-size:1.05rem; margin-bottom:40px">Underperforming routes should be repriced using the lane profitability analysis, and a driver coaching program should be built around the habits of the top performers to lift fuel efficiency and on-time rates. Finally, the company should establish a safety training program to reduce the preventable incidents that are costing over a million dollars in damages.</p>
-    
-    <!-- Links -->
     <div style="border-top:1px solid #333; padding-top:30px; margin-top:50px">
-      <p style="color:#ccc; font-size:1rem"><b>View repository:</b> <a href="#" style="color:#4ade80; text-decoration:underline">GitHub</a></p>
-      <p style="color:#ccc; font-size:1rem"><b>Connect:</b> <a href="https://linkedin.com/in/deborah-eke-5aaa24285/" target="_blank" style="color:#4ade80; text-decoration:underline">LinkedIn</a></p>
+      <p style="color:#ccc; font-size:1rem"><b>View repository:</b> <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" style="color:#4ade80; text-decoration:underline">GitHub</a></p>
     </div>
   </div>
 </div>
   </div>
-</div>
 
 
 </div>

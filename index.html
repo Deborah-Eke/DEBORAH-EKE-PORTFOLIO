@@ -264,12 +264,12 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
 </script>
 <!-- LOGISTICS MODAL -->
 <div id="logisModal" class="modal">
-  <div class="modal-content" style="max-width:1200px; padding:50px; max-height:90vh; overflow-y:auto; background:#0a0a0a; color:#fff; text-align:left"> 
-    <span class="close" onclick="closeModal('logisModal')" style="font-size:2rem; cursor:pointer; float:right">&times;</span>
+  <div class="modal-content" style="max-width:1200px; padding:50px; max-height:90vh; overflow-y:auto; background:#0a0a0a; color:#e5e5e5; text-align:left; line-height:1.9"> 
+    <span class="close" onclick="closeModal('logisModal')" style="font-size:2.2rem; cursor:pointer; float:right; position:sticky; top:10px; z-index:10; background:#0a0a0a; padding:5px 10px">&times;</span>
     
     <h1 style="font-size:2.8rem; font-weight:800; margin-bottom:20px">🚛 Logistics Operations Dashboard — Power BI</h1>
     
-    <!-- Badges - SMALLER VERSION ONLY THING CHANGED -->
+    <!-- BADGES - SMALLER ONLY CHANGE -->
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; justify-content:center">
       <span style="background:#facc15; color:#000; padding:4px 10px; border-radius:16px; font-size:0.75rem; font-weight:600">Power BI Dashboard</span>
       <span style="background:#4ade80; color:#000; padding:4px 10px; border-radius:16px; font-size:0.75rem; font-weight:600">DAX Measures</span>
@@ -277,27 +277,44 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
       <span style="background:#3b82f6; color:#fff; padding:4px 10px; border-radius:16px; font-size:0.75rem; font-weight:600">Loads: 85,410</span>
       <span style="background:#a855f7; color:#fff; padding:4px 10px; border-radius:16px; font-size:0.75rem; font-weight:600">Period: 2022-2024</span>
     </div>
-    
+
+    <hr style="border:0; border-top:1px solid #333; margin:30px 0">
+
+    <!-- TABLE OF CONTENTS -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📋 Table of Contents</h2>
-    <p style="color:#aaa; line-height:1.8">Project Overview | Dashboard Pages | Dataset Information | Project Objectives | Tools & Technologies | Data Cleaning | Data Model | DAX Measures | Key Metrics | Key Insights | Business Recommendations</p>
-    
+    <p style="color:#aaa">Project Overview | Dashboard Pages | Dataset Information | Project Objectives | Tools & Technologies | Data Cleaning & Preparation | Data Model & Relationships | DAX Measures | Key Metrics Summary | Key Insights | Business Recommendations | Project Workflow | Folder Structure | Skills Demonstrated | Results Summary | Future Improvements | Conclusion</p>
+
+    <!-- PROJECT OVERVIEW -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📌 Project Overview</h2>
-    <p style="color:#ddd; line-height:1.9; margin-bottom:15px">This project delivers a fully interactive <b>4-page Power BI dashboard</b> analysing the end-to-end operations of a US-based trucking and logistics company. The analysis covers 85,410 loads, 150 active drivers, 200 customers, and 122 million miles of freight movement across a three-year period from 2022 to 2024.</p>
-    <p style="color:#ddd; line-height:1.9; margin-bottom:15px"><b>The Business Problem:</b> Trucking operations generate data across multiple disconnected systems — loads, trips, fuel purchases, maintenance records, delivery events, and safety incidents. Without a unified analytical view, operations managers cannot see which routes are profitable, which drivers are underperforming, where safety incidents are concentrated, or which customers are generating the most value.</p>
-    <p style="color:#ddd; line-height:1.9; margin-bottom:30px"><b>Why This Analysis Matters:</b> With $298.6 million in total revenue and only a 55.67% on-time delivery rate, this business is generating strong top-line numbers while quietly experiencing a service quality crisis. Nearly half of all 85,410 deliveries arrived late.</p>
-    
+    <p>This project delivers a fully interactive <b>4-page Power BI dashboard</b> analysing the end-to-end operations of a US-based trucking and logistics company. The analysis covers 85,410 loads, 150 active drivers, 200 customers, and 122 million miles of freight movement across a three-year period from 2022 to 2024.</p>
+    <h3 style="margin-top:20px; color:#4ade80">The Business Problem</h3>
+    <p>Trucking operations generate data across multiple disconnected systems — loads, trips, fuel purchases, maintenance records, delivery events, and safety incidents. Without a unified analytical view, operations managers cannot see which routes are profitable, which drivers are underperforming, where safety incidents are concentrated, or which customers are generating the most value. Decisions get made on intuition rather than evidence.</p>
+    <h3 style="margin-top:20px; color:#4ade80">Why This Analysis Matters</h3>
+    <p>With $298.6 million in total revenue and only a 55.67% on-time delivery rate, this business is generating strong top-line numbers while quietly experiencing a service quality crisis. Nearly half of all 85,410 deliveries arrived late. The dashboard surfaces these issues and provides the granularity needed to act on them.</p>
+    <h3 style="margin-top:20px; color:#4ade80">Objective</h3>
+    <p>To connect 14 tables of operational logistics data into a single Power BI model, build a suite of DAX measures covering revenue, profitability, safety, and service quality, and deliver a four-page interactive dashboard that answers the most critical business questions across operations, driver management, fleet safety, and customer analysis.</p>
+
+    <!-- DASHBOARD PAGES -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📊 Dashboard Pages</h2>
-    <p style="color:#ddd; margin-bottom:10px"><b>Page 1 — Overview:</b> The executive summary page showing headline KPIs, top 10 customers by revenue, customer type revenue split, monthly incident trend, fleet utilization gauge.</p>
-    <img src="LOGIS.png" alt="Overview Dashboard" style="width:100%; border-radius:8px; margin-bottom:20px">
-    <p style="color:#ddd; margin-bottom:10px"><b>Page 2 — Drivers & Route Performance:</b> Covers on-time delivery rate, late delivery count, active driver count, profit per driver, booking type split.</p>
-    <img src="LOGIS2.png" alt="Drivers & Route Performance" style="width:100%; border-radius:8px; margin-bottom:20px">
-    <p style="color:#ddd; margin-bottom:10px"><b>Page 3 — Maintenance & Safety:</b> Tracks total damage cost, preventable incident rate, total downtime hours, total maintenance cost.</p>
-    <img src="LOGIS3.png" alt="Maintenance & Safety" style="width:100%; border-radius:8px; margin-bottom:20px">
-    <p style="color:#ddd; margin-bottom:10px"><b>Page 4 — Customers Analysis:</b> Analyses total customers, total loads delivered, total revenue, late deliveries by customer.</p>
-    <img src="LOGIS1.png" alt="Customers Analysis" style="width:100%; border-radius:8px; margin-bottom:30px">
+    <h3>Page 1 — Overview</h3>
+    <p>The executive summary page showing headline KPIs, top 10 customers by revenue, customer type revenue split, monthly incident trend, fleet utilization gauge, vehicle damage cost by incident type, average revenue per load, and a monthly financial summary table.</p>
+    <img src="LOGIS.png" alt="Overview Dashboard" style="width:100%; border-radius:8px; margin:15px 0; border:1px solid #333">
     
+    <h3>Page 2 — Drivers & Route Performance</h3>
+    <p>Covers on-time delivery rate, late delivery count, active driver count, profit per driver, booking type split (Dedicated / Contract / Spot), total loads delivered by driver, driver experience vs incident rate, and route profit by lane.</p>
+    <img src="LOGIS2.png" alt="Drivers & Route Performance" style="width:100%; border-radius:8px; margin:15px 0; border:1px solid #333">
+    
+    <h3>Page 3 — Maintenance & Safety</h3>
+    <p>Tracks total damage cost, preventable incident rate, total downtime hours, total maintenance cost, maintenance cost by type, incidents by home terminal, incident type breakdown, and monthly incident trend.</p>
+    <img src="LOGIS3.png" alt="Maintenance & Safety" style="width:100%; border-radius:8px; margin:15px 0; border:1px solid #333">
+    
+    <h3>Page 4 — Customers Analysis</h3>
+    <p>Analyses total customers, total loads delivered, total revenue, late deliveries by customer, load volume and revenue ranking by customer name, and monthly profit trend.</p>
+    <img src="LOGIS1.png" alt="Customers Analysis" style="width:100%; border-radius:8px; margin:15px 0; border:1px solid #333">
+
+    <!-- DATASET INFORMATION -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🗂 Dataset Information</h2>
-    <table style="width:100%; color:#ddd; border-collapse:collapse; margin-bottom:30px; font-size:0.95rem">
+    <table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:0.95rem">
       <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Total Tables</b></td><td style="padding:10px; border-bottom:1px solid #333">14 connected tables</td></tr>
       <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Total Loads</b></td><td style="padding:10px; border-bottom:1px solid #333">85,410</td></tr>
       <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Total Customers</b></td><td style="padding:10px; border-bottom:1px solid #333">200</td></tr>
@@ -306,63 +323,163 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
       <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Period Covered</b></td><td style="padding:10px; border-bottom:1px solid #333">January 2022 – December 2024</td></tr>
       <tr><td style="padding:10px"><b>Model Type</b></td><td style="padding:10px">Star schema with central Date table</td></tr>
     </table>
-    
+    <h3>Tables in the Data Model</h3>
+    <p><b>Dimensions:</b> customers, drivers, trucks, trailers, routes, facilities</p>
+    <p><b>Facts:</b> loads, trips, fuel_purchases, maintenance_records, delivery_events, safety_incidents</p>
+    <p><b>Aggregates:</b> driver_monthly_metrics, truck_utilization_metrics</p>
+
+    <!-- PROJECT OBJECTIVES -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🎯 Project Objectives</h2>
-    <ul style="color:#ddd; line-height:2; padding-left:20px; margin-bottom:30px">
+    <ul style="line-height:2">
       <li>Measure total revenue, profit, and margin across the 3-year operation</li>
       <li>Identify which customers and routes generate the highest revenue and profit</li>
       <li>Evaluate on-time delivery performance against industry benchmarks</li>
       <li>Analyse driver performance across loads delivered, revenue, and safety incidents</li>
       <li>Assess fleet utilisation and average fuel efficiency (MPG)</li>
+      <li>Break down maintenance costs by type to support budget planning</li>
+      <li>Identify preventable safety incidents and their financial impact</li>
+      <li>Surface which home terminals have the highest incident concentration</li>
+      <li>Measure route profitability by lane to guide pricing and load acceptance decisions</li>
+      <li>Track monthly profit trends to identify seasonal patterns</li>
     </ul>
-    
+
+    <!-- TOOLS & TECHNOLOGIES -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🛠 Tools & Technologies</h2>
-    <p style="color:#ddd; margin-bottom:30px"><b>Power BI Desktop, Power Query (M), DAX, Star Schema, SQL, Excel / CSV</b></p>
-    
+    <table style="width:100%; border-collapse:collapse; margin:20px 0">
+      <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Power BI Desktop</b></td><td style="padding:10px; border-bottom:1px solid #333">Data modelling, DAX measures, and dashboard development</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Power Query (M)</b></td><td style="padding:10px; border-bottom:1px solid #333">Data cleaning, type standardisation, and transformation</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #333"><b>DAX</b></td><td style="padding:10px; border-bottom:1px solid #333">Custom KPIs, calculated measures, and time intelligence</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #333"><b>Star Schema</b></td><td style="padding:10px; border-bottom:1px solid #333">Relationship modelling across 14 tables</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #333"><b>SQL</b></td><td style="padding:10px; border-bottom:1px solid #333">Source data validation and cross-table join queries</td></tr>
+      <tr><td style="padding:10px"><b>Excel / CSV</b></td><td style="padding:10px">Source data format</td></tr>
+    </table>
+
+    <!-- DATA CLEANING -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🧹 Data Cleaning & Preparation</h2>
+    <ul style="line-height:2">
+      <li>Removed duplicate records across all 14 tables</li>
+      <li>Fixed data types on every column</li>
+      <li>Standardised text columns including city names, event types, order statuses, and booking types</li>
+      <li>Handled missing values by column</li>
+      <li>Created a central Date table with Year, Quarter, Month Number, Month Name, and Month-Year columns</li>
+      <li>Built all relationships in Model view — one-to-many with single-direction filtering</li>
+      <li>Disabled Auto Date/Time in Power BI settings</li>
+    </ul>
+
+    <!-- DATA MODEL -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🔗 Data Model & Relationships</h2>
-    <img src="model_view.png" alt="Data Model & Relationships" style="width:100%; border-radius:8px; margin-bottom:30px">
-    
+    <p>The full data model was built in Power BI Model view using a star schema pattern. All 14 tables are connected through clearly defined one-to-many relationships with single-direction filtering.</p>
+    <h3>Relationship Diagram</h3>
+    <img src="model_view.png" alt="Data Model & Relationships" style="width:100%; border-radius:8px; margin:15px 0; border:1px solid #333">
+
+    <!-- DAX MEASURES -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📐 DAX Measures</h2>
-    <img src="dax_avg_mpg.png" alt="AVG MPG" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_total_miles.png" alt="Total Miles Driven" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_total_incidents.png" alt="Total Incidents" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_fuel_cost_per_lane.png" alt="Fuel Cost per Lane" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_downtime.png" alt="Total Downtime Hour" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_maintenance_cost.png" alt="Total Maintenance Cost" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_total_loads.png" alt="Total Load Delivered" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_revenue_pct.png" alt="Revenue % by Customer Type" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_profit_margin.png" alt="Profit Margin %" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_profit_per_driver.png" alt="Profit per Driver" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_late_deliveries.png" alt="Late Deliveries" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_active_drivers.png" alt="Active Drivers" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_otd.png" alt="On-time-delivery %" style="width:100%; border-radius:8px; margin-bottom:15px">
-    <img src="dax_total_customers.png" alt="Total Customers" style="width:100%; border-radius:8px; margin-bottom:30px">
-    
+    <h3>Measure Screenshots</h3>
+    <p><b>Average MPG</b></p><img src="dax_avg_mpg.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Miles Driven</b></p><img src="dax_total_miles.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Incidents</b></p><img src="dax_total_incidents.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Fuel Cost per Lane</b></p><img src="dax_fuel_cost_per_lane.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Downtime Hour</b></p><img src="dax_downtime.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Maintenance Cost</b></p><img src="dax_maintenance_cost.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Load Delivered</b></p><img src="dax_total_loads.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Revenue % by Customer Type</b></p><img src="dax_revenue_pct.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Profit Margin %</b></p><img src="dax_profit_margin.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Profit per Driver</b></p><img src="dax_profit_per_driver.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Late Deliveries</b></p><img src="dax_late_deliveries.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Active Drivers</b></p><img src="dax_active_drivers.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>On-time-delivery %</b></p><img src="dax_otd.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+    <p><b>Total Customers</b></p><img src="dax_total_customers.png" style="width:100%; border-radius:8px; margin:10px 0; border:1px solid #333">
+
+    <h3>Full Measure Reference</h3>
+    <table style="width:100%; border-collapse:collapse; margin:20px 0; font-size:0.85rem">
+      <tr style="background:#1a1a1a"><th style="padding:10px; border:1px solid #333; text-align:left">Measure</th><th style="padding:10px; border:1px solid #333; text-align:left">Table</th><th style="padding:10px; border:1px solid #333; text-align:left">Format</th></tr>
+      <tr><td style="padding:10px; border:1px solid #333">AVG MPG</td><td style="padding:10px; border:1px solid #333">driver_monthly_metrics</td><td style="padding:10px; border:1px solid #333">General</td></tr>
+      <tr><td style="padding:10px; border:1px solid #333">Total Miles Driven</td><td style="padding:10px; border:1px solid #333">trips</td><td style="padding:10px; border:1px solid #333">Whole Number</td></tr>
+      <tr><td style="padding:10px; border:1px solid #333">TOTAL INCIDENTS</td><td style="padding:10px; border:1px solid #333">safety_incidents</td><td style="padding:10px; border:1px solid #333">Whole Number</td></tr>
+      <tr><td style="padding:10px; border:1px solid #333">Total Load Delivered</td><td style="padding:10px; border:1px solid #333">loads</td><td style="padding:10px; border:1px solid #333">Decimal Number</td></tr>
+      <tr><td style="padding:10px; border:1px solid #333">Profit Margin%</td><td style="padding:10px; border:1px solid #333">loads</td><td style="padding:10px; border:1px solid #333">Percentage</td></tr>
+      <tr><td style="padding:10px; border:1px solid #333">On-time-delivery %</td><td style="padding:10px; border:1px solid #333">driver_monthly_metrics</td><td style="padding:10px; border:1px solid #333">Percentage (2dp)</td></tr>
+    </table>
+
+    <!-- KEY METRICS -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📈 Key Metrics Summary</h2>
-    <p style="color:#ddd"><b>Total Revenue:</b> $298.6M | <b>Total Profit:</b> $197.3M | <b>Profit Margin:</b> 66.07%</p>
-    <p style="color:#ddd"><b>On-Time Delivery Rate:</b> 55.67% | <b>Late Deliveries:</b> 47,308</p>
-    <p style="color:#ddd; margin-bottom:30px"><b>Top Lane by Profit:</b> NC → OR ($3.9M)</p>
-    
+    <h3>Overview</h3>
+    <p><b>Total Revenue:</b> $298.6M | <b>Total Profit:</b> $197.3M | <b>Total Miles Driven:</b> 122M | <b>Average MPG:</b> 6.50 | <b>Profit Margin:</b> 66.07% | <b>Fleet Utilisation Rate:</b> 83%</p>
+    <h3>Drivers & Route Performance</h3>
+    <p><b>On-Time Delivery Rate:</b> 55.67% | <b>Late Deliveries:</b> 47,308 | <b>Active Drivers:</b> 150 | <b>Top Lane by Profit:</b> NC → OR ($3.9M)</p>
+    <h3>Maintenance & Safety</h3>
+    <p><b>Total Damage Cost:</b> $1.60M | <b>Preventable Incident Rate:</b> 37.65% | <b>Total Downtime Hours:</b> 72,230</p>
+    <h3>Customers Analysis</h3>
+    <p><b>Total Customers:</b> 200 | <b>Total Loads Delivered:</b> 85,410 | <b>Top Customer by Revenue:</b> First Group ($10.4M)</p>
+
+    <!-- KEY INSIGHTS -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">💡 Key Insights</h2>
-    <ol style="color:#ddd; line-height:2; padding-left:20px; margin-bottom:30px">
+    <ol style="line-height:2">
       <li>On-time delivery is the most critical operational failure. 55.67% OTD vs 90%+ industry standard.</li>
       <li>The lateness is not a driver capacity problem. Delays from detention at customer facilities.</li>
       <li>Fleet utilisation at 83% leaves meaningful headroom.</li>
       <li>NC → OR lane is the most profitable at $3.9M.</li>
       <li>37.65% of safety incidents were preventable. $1.60M damage cost.</li>
+      <li>DOT violations are the most frequent incident type at 39 cases.</li>
+      <li>Indianapolis and Las Vegas terminals carry the highest incident load.</li>
+      <li>First Group is the anchor customer at $10.4M.</li>
     </ol>
-    
+
+    <!-- RECOMMENDATIONS -->
     <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📢 Business Recommendations</h2>
-    <ul style="color:#ddd; line-height:2; padding-left:20px; margin-bottom:40px">
+    <ol style="line-height:2">
       <li>Investigate detention at customer facilities before adding capacity.</li>
       <li>Launch targeted safety coaching programme at Indianapolis and Las Vegas.</li>
       <li>Reprice underperforming lanes based on cost-per-mile analysis.</li>
       <li>Develop a key account service programme for the top 10 customers.</li>
+      <li>Build a fleet replacement schedule for high-maintenance assets.</li>
+      <li>Review Dedicated booking rates against current market conditions.</li>
+    </ol>
+
+    <!-- WORKFLOW -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🔄 Project Workflow</h2>
+    <pre style="background:#1a1a1a; padding:15px; border-radius:8px; overflow-x:auto">14 Raw Source Tables → Data Cleaning → Data Modelling → DAX Measures → 4-Page Dashboard → Insights & Recommendations</pre>
+
+    <!-- FOLDER STRUCTURE -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📁 Folder Structure</h2>
+    <pre style="background:#1a1a1a; padding:15px; border-radius:8px; overflow-x:auto; font-size:0.85rem">Logistics-Operations-Dashboard/
+├── Data/ [14 csv files]
+├── Dashboard/ Logistics_Operations_Dashboard.pbix
+├── Images/ [All PNG files]
+└── README.md</pre>
+
+    <!-- SKILLS -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🧠 Skills Demonstrated</h2>
+    <p><b>Data Modelling:</b> 14-table star schema with one-to-many relationships</p>
+    <p><b>Power Query:</b> Cleaning, type fixing, deduplication, and Date table creation</p>
+    <p><b>DAX Measures:</b> Revenue, margin, OTD%, cost per mile, preventable incident rate</p>
+    <p><b>Dashboard Design:</b> 4-page interactive report with consistent design system</p>
+
+    <!-- RESULTS -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📝 Results Summary</h2>
+    <p>This project transforms 14 connected logistics tables into a four-page interactive Power BI dashboard. The analysis uncovered a 55.67% on-time delivery rate, identified the NC → OR lane as the most profitable at $3.9M, found that 37.65% of safety incidents were preventable, and revealed that Indianapolis and Las Vegas terminals carry disproportionate incident risk.</p>
+
+    <!-- FUTURE -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🚀 Future Improvements</h2>
+    <ul style="line-height:2">
+      <li>Predictive on-time delivery model</li>
+      <li>Driver drill-through detail page</li>
+      <li>Lane profitability map</li>
+      <li>Maintenance cost forecasting</li>
+      <li>Real-time data refresh</li>
     </ul>
-    
-    <div style="border-top:1px solid #333; padding-top:30px; text-align:center">
+
+    <!-- CONCLUSION -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">✅ Conclusion</h2>
+    <p>This logistics operations dashboard demonstrates what becomes possible when operational data is treated as a strategic asset. By connecting 14 tables, building a clean star schema, and developing targeted DAX measures, the project delivers a tool that gives logistics leadership visibility into every dimension of the operation.</p>
+
+    <!-- AUTHOR -->
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">👤 Author</h2>
+    <p><b>Eke Deborah</b> — Data Analyst | Power BI · SQL · Python · Excel</p>
+
+    <div style="border-top:1px solid #333; padding-top:30px; margin-top:40px; text-align:center">
       <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" 
-         style="padding:14px 28px; background:#4ade80; color:#0a0a0a; border-radius:8px; text-decoration:none; font-weight:700; font-size:1.05rem">
+         style="padding:14px 28px; background:#4ade80; color:#0a0a0a; border-radius:8px; text-decoration:none; font-weight:700; font-size:1.05rem; display:inline-block">
          View Full Code on GitHub →
       </a>
     </div>

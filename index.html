@@ -264,41 +264,78 @@ footer{text-align:center; padding:40px 20px; border-top:1px solid #222; color:#6
 </script>
 <!-- LOGISTICS MODAL -->
 <div id="logisModal" class="modal">
-  <div class="modal-content" style="max-width:1000px; padding:40px">
+  <div class="modal-content" style="max-width:1200px; padding:50px; max-height:90vh; overflow-y:auto">
     <span class="close" onclick="closeModal('logisModal')">&times;</span>
-    <div id="logis-readme" style="color:#ddd">Loading project...</div>
+    
+    <h1 style="font-size:2.8rem; font-weight:800; margin-bottom:20px">🚛 Logistics Operations Dashboard — Power BI</h1>
+    
+    <!-- Badges -->
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px">
+      <span style="background:#facc15; color:#000; padding:6px 12px; border-radius:20px; font-size:0.85rem; font-weight:600">Power BI Dashboard</span>
+      <span style="background:#4ade80; color:#000; padding:6px 12px; border-radius:20px; font-size:0.85rem; font-weight:600">DAX Measures</span>
+      <span style="background:#22c55e; color:#000; padding:6px 12px; border-radius:20px; font-size:0.85rem; font-weight:600">Status: Completed</span>
+      <span style="background:#3b82f6; color:#fff; padding:6px 12px; border-radius:20px; font-size:0.85rem; font-weight:600">Loads: 85,410</span>
+      <span style="background:#a855f7; color:#fff; padding:6px 12px; border-radius:20px; font-size:0.85rem; font-weight:600">Period: 2022-2024</span>
+    </div>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📌 Project Overview</h2>
+    <p style="color:#ddd; line-height:1.9; margin-bottom:15px">This project delivers a fully interactive <b>4-page Power BI dashboard</b> analysing the end-to-end operations of a US-based trucking and logistics company. The analysis covers 85,410 loads, 150 active drivers, 200 customers, and 122 million miles of freight movement across a three-year period from 2022 to 2024.</p>
+    <p style="color:#ddd; line-height:1.9; margin-bottom:15px"><b>The Business Problem:</b> Trucking operations generate data across multiple disconnected systems — loads, trips, fuel purchases, maintenance records, delivery events, and safety incidents. Without a unified analytical view, operations managers cannot see which routes are profitable, which drivers are underperforming, where safety incidents are concentrated, or which customers are generating the most value.</p>
+    <p style="color:#ddd; line-height:1.9; margin-bottom:30px"><b>Why This Analysis Matters:</b> With $298.6 million in total revenue and only a 55.67% on-time delivery rate, this business is generating strong top-line numbers while quietly experiencing a service quality crisis.</p>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📊 Dashboard Pages</h2>
+    <p style="color:#ddd; margin-bottom:10px"><b>Page 1 — Overview:</b> Executive summary with headline KPIs, top 10 customers, fleet utilization</p>
+    <img src="LOGIS.png" alt="Overview" style="width:100%; border-radius:8px; margin-bottom:20px">
+    <p style="color:#ddd; margin-bottom:10px"><b>Page 2 — Drivers & Route Performance:</b> On-time delivery, profit per driver, route profit</p>
+    <img src="LOGIS2.png" alt="Drivers" style="width:100%; border-radius:8px; margin-bottom:20px">
+    <p style="color:#ddd; margin-bottom:10px"><b>Page 3 — Maintenance & Safety:</b> Damage cost, preventable incidents, downtime</p>
+    <img src="LOGIS3.png" alt="Maintenance" style="width:100%; border-radius:8px; margin-bottom:20px">
+    <p style="color:#ddd; margin-bottom:10px"><b>Page 4 — Customers Analysis:</b> Revenue by customer, late deliveries</p>
+    <img src="LOGIS1.png" alt="Customers" style="width:100%; border-radius:8px; margin-bottom:30px">
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">🗂 Dataset Information</h2>
+    <table style="width:100%; color:#ddd; border-collapse:collapse; margin-bottom:30px">
+      <tr><td style="padding:8px; border-bottom:1px solid #333"><b>Total Tables</b></td><td style="padding:8px; border-bottom:1px solid #333">14 connected tables</td></tr>
+      <tr><td style="padding:8px; border-bottom:1px solid #333"><b>Total Loads</b></td><td style="padding:8px; border-bottom:1px solid #333">85,410</td></tr>
+      <tr><td style="padding:8px; border-bottom:1px solid #333"><b>Total Customers</b></td><td style="padding:8px; border-bottom:1px solid #333">200</td></tr>
+      <tr><td style="padding:8px; border-bottom:1px solid #333"><b>Active Drivers</b></td><td style="padding:8px; border-bottom:1px solid #333">150</td></tr>
+      <tr><td style="padding:8px; border-bottom:1px solid #333"><b>Total Miles Driven</b></td><td style="padding:8px; border-bottom:1px solid #333">122,159,201</td></tr>
+      <tr><td style="padding:8px"><b>Period Covered</b></td><td style="padding:8px">January 2022 – December 2024</td></tr>
+    </table>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📈 Key Metrics Summary</h2>
+    <p style="color:#ddd"><b>Total Revenue:</b> $298.6M | <b>Total Profit:</b> $197.3M | <b>Profit Margin:</b> 66.07%</p>
+    <p style="color:#ddd"><b>On-Time Delivery Rate:</b> 55.67% | <b>Late Deliveries:</b> 47,308</p>
+    <p style="color:#ddd; margin-bottom:30px"><b>Top Lane by Profit:</b> NC → OR ($3.9M)</p>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">💡 Key Insights</h2>
+    <ol style="color:#ddd; line-height:2; padding-left:20px; margin-bottom:30px">
+      <li>On-time delivery is the most critical operational failure. 55.67% OTD vs 90%+ industry standard.</li>
+      <li>The lateness is not a driver capacity problem. Delays from detention at customer facilities.</li>
+      <li>37.65% of safety incidents were preventable. $1.60M damage cost.</li>
+      <li>NC → OR lane is the most profitable at $3.9M.</li>
+      <li>First Group is the anchor customer at $10.4M.</li>
+    </ol>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📢 Business Recommendations</h2>
+    <ul style="color:#ddd; line-height:2; padding-left:20px; margin-bottom:30px">
+      <li>Investigate detention at customer facilities before adding capacity.</li>
+      <li>Launch targeted safety coaching programme at Indianapolis and Las Vegas.</li>
+      <li>Reprice underperforming lanes based on cost-per-mile analysis.</li>
+      <li>Develop a key account service programme for the top 10 customers.</li>
+    </ul>
+    
+    <h2 style="font-size:1.8rem; font-weight:700; margin-top:40px; margin-bottom:15px">📐 Data Model</h2>
+    <img src="model_view.png" alt="Data Model" style="width:100%; border-radius:8px; margin-bottom:30px">
+    
+    <div style="border-top:1px solid #333; padding-top:30px; margin-top:40px; text-align:center">
+      <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank" 
+         style="padding:14px 28px; background:#4ade80; color:#0a0a0a; border-radius:8px; text-decoration:none; font-weight:700; font-size:1.05rem">
+         View Full Code on GitHub →
+      </a>
+    </div>
   </div>
 </div>
-
-<script>
-async function loadLogisReadme() {
-  const url = 'https://raw.githubusercontent.com/Debbie8399/Logistics-Operation-Analysis/main/README.md';
-  try {
-    const res = await fetch(url);
-    const text = await res.text();
-    // simple markdown to html
-    let html = text
-      .replace(/^# (.*$)/gim, '<h1 style="font-size:2.5rem;font-weight:800;margin:20px 0">$1</h1>')
-      .replace(/^## (.*$)/gim, '<h2 style="font-size:1.8rem;font-weight:700;margin:30px 0 15px">$1</h2>')
-      .replace(/\!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" style="width:100%;border-radius:8px;margin:20px 0">')
-      .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" style="color:#4ade80">$1</a>')
-      .replace(/\n/g, '<br>');
-    document.getElementById('logis-readme').innerHTML = html;
-  } catch(e) {
-    document.getElementById('logis-readme').innerHTML = 'Error loading. <a href="https://github.com/Debbie8399/Logistics-Operation-Analysis" target="_blank">Open on Github</a>';
-  }
-}
-
-// load when modal opens
-function openModal(id){
-  document.getElementById(id).style.display = 'block';
-  document.body.style.overflow = 'hidden';
-  if(id === 'logisModal'){
-    loadLogisReadme();
-  }
-}
-</script>
-  </div>
 </div>
 </div>
 </div>
